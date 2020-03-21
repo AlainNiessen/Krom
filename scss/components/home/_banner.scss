@@ -1,0 +1,100 @@
+//Banner module
+.m-home-main-banner {
+    background: url('../images/hero-bg-smart.jpg') no-repeat center;
+    background-size: cover;
+    width: 100%;
+    height: 100%;
+
+}
+.m-home-main-banner-content {
+    @include wrap-main($width, $max-width, $margin);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.m-home-main-banner-text1, .m-home-main-banner-text2 {
+    width: 20rem;    
+    text-align: center;
+}
+.m-home-main-banner-text1 {
+    height: 20rem;
+}
+
+.m-home-main-banner-text1 p {
+    margin-top: 2rem;
+    font-size: 2.5rem;
+    color: map-get($map: $colors, $key: 'main');
+}
+
+.m-home-main-banner-text2 {   
+    height: 10rem;
+    line-height: 2rem;
+    position: relative;
+}
+
+.m-home-main-banner-text2::before {
+    content: "";
+    position: absolute;
+    width: 5rem;
+    height: 0.2rem;
+    background-color:map-get($map: $colors,$key: 'third');    
+    display: block;
+    left: 50%;
+    top: -2rem;
+    transform: translate(-50%);
+        -webkit-transform: translate(-50%);
+        -moz-transform: translate(-50%);
+        -ms-transform: translate(-50%);
+        -o-transform: translate(-50%);
+}
+.m-home-main-banner-cercle {
+    margin-bottom: 5rem;
+    ul {
+        margin: 0;
+        padding: 0;
+    }
+    li {
+        list-style: none;
+        display: inline-block;
+    }
+    a {
+        text-decoration: none;
+        color: map-get($map: $colors, $key: 'main');
+        display: block;
+        margin: 1rem;
+    }
+    a:hover {
+        color: map-get($map: $colors, $key: 'third');
+    }
+}
+//media query for banner module tablette
+@media screen and (min-width: 720px) {
+    .m-home-main-banner {
+        background: url('../images/hero-bg-tab.jpg') no-repeat center;
+        background-size: cover;
+        width: 100%;
+        height: 100%;
+    }
+}
+
+//Media Query for banner module pc
+@media screen and (min-width: 960px) {
+    .m-home-main-banner {
+        background: url('../images/hero-bg-pc.jpg') no-repeat center;
+        background-size: cover;
+        width: 100%;
+        height: 100%;
+    }
+    .m-home-main-banner-content {
+        align-items: flex-start;               
+    }
+    .m-home-main-banner-text1, .m-home-main-banner-text2 {
+        text-align: left;
+    }
+    .m-home-main-banner-text2::before {
+        left: 2.6rem;
+        top: -2rem;
+    }   
+}

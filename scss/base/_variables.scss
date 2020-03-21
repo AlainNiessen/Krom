@@ -1,0 +1,33 @@
+//Variable map for colors
+$colors: (
+    'main': white,
+    'second': black,
+    'third': yellow,
+    'bg-main': rgb(1, 1, 12),
+    'bg-second': black,
+    'bg-third': rgb(255, 208, 0),
+    'text': rgb(56, 56, 56),
+    'form-text': black,
+    'form-box':  rgb(56, 56, 56)
+);
+
+//Variable list for font-size
+$fontsize: (
+    1.3rem,
+    1.2rem,
+    1.1rem
+);
+
+//Variables for grid system
+$grid-columns: 12;
+
+$media-query: (
+    'md': 720px,
+    'lg': 960px
+);
+
+/*Variables for mixins
+different wrap sections in main*/
+$width: 100%;
+$max-width: 90%;
+$margin: 0 auto;

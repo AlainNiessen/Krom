@@ -1,0 +1,22 @@
+//Contact (form and informations) module
+.m-home-main-contact {
+    @include wrap-main($width, $max-width, $margin);
+    padding-bottom: 3rem; 
+}
+
+.m-home-main-contact-box {
+    margin-bottom: 1rem;
+}
+
+//media query for contact module
+@media screen and (min-width: 720px) {
+    .m-home-main-contact-address {
+        padding-left: 1rem;
+    }
+    .form {
+        padding-right: 1rem;
+    }
+}
+
+
+ 

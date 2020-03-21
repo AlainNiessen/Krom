@@ -1,0 +1,63 @@
+//Team module
+.m-home-main-team {
+    @include wrap-main($width, $max-width, $margin);
+    padding-bottom: 2rem;
+}
+
+.m-home-main-team-box {
+    margin: 2rem 0;
+}
+
+.m-home-main-team-box-member {
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 1rem;
+    img {
+        width: 20%;
+    }
+}
+
+.m-home-main-team-box-member-title {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    margin-left: 1rem;
+}
+
+.m-home-main-team-box-description {
+    margin-bottom: 1rem;
+}
+
+.m-home-main-team-box-social-media {
+    ul {
+        margin: 0;
+        padding: 0;
+    }
+    li {
+        display: inline-block;
+    }
+    a {
+        color: map-get($colors, 'main');
+        margin: 0 0.5rem;
+    }
+}
+
+//media query for team module for tablette
+@media screen and (min-width: 720px) {
+    .m-home-main-team-box-member {
+        flex-direction: column;
+        img {
+            width: 100%;
+        }
+    }
+    .m-home-main-team-box-member-title {
+        justify-content: flex-start;
+        align-items: flex-start;
+        margin: 0;
+    }
+    .m-home-main-team-box {
+        margin: 1rem;
+    }    
+}
+

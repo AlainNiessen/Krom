@@ -1,0 +1,5 @@
+@mixin wrap-main($width, $max-width, $margin) {
+    width: $width;
+    max-width: $max-width;
+    margin: $margin;    
+}

@@ -1,0 +1,32 @@
+//Latest Project module
+.m-home-main-projects-intro {
+    @include wrap-main($width, $max-width, $margin);
+}
+
+.m-home-main-projects-gallery {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 100%;
+    margin-top: 2rem;
+}
+.m-home-main-projects-gallery img {
+    width: 50%;
+}
+
+//media query for latest projects module for tablette
+@media screen and (min-width: 720px) {
+    .m-home-main-projects-gallery img {
+        width: 33%;
+    }
+    .m-home-main-projects-gallery {
+        @include wrap-main($width, $max-width, $margin);
+    }
+}
+
+//media query for latest projects module for pc
+@media screen and (min-width: 720px) {
+    .m-home-main-projects-gallery img {
+        width: 25%;
+    }
+}

@@ -1,0 +1,72 @@
+//l- layout for footer
+footer .wrap {
+    @include wrap-main($width, $max-width, $margin);
+    display: flex;
+    flex-direction: column;
+}
+
+.l-footer-social-media {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;    
+    font-size: 1.2rem;
+    ul {
+        margin: 0;
+        padding: 0;
+    }
+    li {
+        display: inline-block;
+    }
+    a {
+        color: map-get($colors, 'text');
+        margin: 0 0.5rem;
+        padding: 0.4rem;
+    }
+}
+
+.l-footer-content {
+    h2 {
+        position: relative;
+        margin: 3rem auto 1rem auto;
+        color: map-get($map: $colors, $key: 'text');
+        text-align: center;
+    }    
+    h2::before {
+        content: "";
+        position: absolute;
+        display: block;
+        width: 90%;
+        height: 0.1rem;
+        background-color: map-get($colors, 'text');
+        top: -1.5rem;
+        left: 50%;
+        transform: translate(-50%);
+        -webkit-transform: translate(-50%);
+        -moz-transform: translate(-50%);
+        -ms-transform: translate(-50%);
+        -o-transform: translate(-50%);
+    }
+}
+
+.l-footer-text {
+    align-self: center;
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+.l-footer-copyright {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    padding-bottom: 2rem;
+    p {
+        margin: 0;
+    }
+    i {
+        margin-right: 0.2rem;
+    }
+    span {
+        color: map-get($map: $colors, $key: 'main');
+    }
+}
+

@@ -1,0 +1,24 @@
+//Services module
+.m-home-main-services {
+    @include wrap-main($width, $max-width, $margin);
+}
+
+.m-home-main-services-box {
+    padding: 0.5rem;
+    margin: 1rem 2rem 1rem 0;
+}
+
+.m-home-main-services-box {
+    h2 {
+        margin-bottom: 0.5rem;
+    }
+    h2::after {
+        content:".";
+        color: map-get($map: $colors, $key: 'third');
+        padding-left: 0.2rem;
+    }
+    p {
+        line-height: 1.5rem;
+        padding-right: 1rem;
+    }
+}

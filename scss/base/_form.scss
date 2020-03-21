@@ -1,0 +1,70 @@
+//base information for formular
+.form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+//width all space available
+.m-home-main-contact-form-champ, .m-home-main-contact-form-area, .m-home-main-contact-form-submit {
+    width: 100%;
+    display: block;
+}
+
+//width for boxes input, textarea and submit(100% od 100%)
+.box {
+    margin-bottom: 1rem;
+    input {   
+        width: 100%;     
+        padding: 1rem;
+        border-radius: 0.5rem;
+        border: none;
+        color: map-get($colors, 'form-text');
+        background-color: map-get($colors, 'form-box');
+        -webkit-border-radius: 0.5rem;
+        -moz-border-radius: 0.5rem;
+        -ms-border-radius: 0.5rem;
+        -o-border-radius: 0.5rem;
+}
+    textarea { 
+        width: 100%;       
+        height: 5rem;
+        border-radius: 0.5rem;
+        border: none;
+        color: map-get($colors, 'form-text');
+        background-color: map-get($colors, 'form-box');
+        -webkit-border-radius: 0.5rem;
+        -moz-border-radius: 0.5rem;
+        -ms-border-radius: 0.5rem;
+        -o-border-radius: 0.5rem;
+    }
+}
+
+.submit {
+    margin-bottom: 2rem;
+    input {
+        width: 100%;
+        cursor: pointer;
+        padding: 1rem;
+        border-radius: 0.5rem;
+        border: none;
+        color: map-get($colors, 'form-text');
+        background-color: map-get($colors, 'third');
+        -webkit-border-radius: 0.5rem;
+        -moz-border-radius: 0.5rem;
+        -ms-border-radius: 0.5rem;
+        -o-border-radius: 0.5rem;                   
+    }
+}
+
+//media query for formular
+@media screen and (min-width: 720px) {
+    .box {
+        margin-bottom: 2rem;        
+    }
+    .submit {
+        margin-bottom: 2rem;        
+    }       
+}
+    
+   

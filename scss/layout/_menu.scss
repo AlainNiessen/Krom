@@ -1,0 +1,97 @@
+//l- layout for menu in header for smartphone with hamburger 
+.l-header-ham-menu {
+    display: block;
+    font-size: 2rem;
+    color: map-get($map: $colors, $key: 'third');
+    position: relative;
+}
+.l-header-menu {
+    display: none;
+    position: absolute;
+    right: 1rem;
+    text-align: center;
+    background-color: map-get($map: $colors, $key: 'second');
+    ul {
+        padding: 0;
+        margin: 0;
+    };
+    li {
+        display: block;
+        list-style: none;
+    }
+    a {
+        text-decoration: none;
+        color: map-get($map: $colors, $key: 'main');
+        display: block;
+        padding: 1rem;
+    }
+    
+    a::after {
+        content: ".";//Decoration point after links
+        color: map-get($map: $colors, $key: 'main');
+        font-size: 1rem;
+        padding-left: 0.2rem;
+    }
+    a:hover {
+        color: map-get($map: $colors, $key: 'third');
+        border-bottom: 0.1rem solid map-get($map: $colors, $key: 'third');
+    }
+}
+.l-header-menu.is-active {
+    display: block;
+}
+.l-header-soc-menu {
+    display: none;
+}
+
+//Media query for menu in header (tablette without hamburger)
+@media screen and (min-width: 720px) {
+    .l-header-ham-menu {
+        display: none;        
+    }
+    .l-header-menu {
+        display: block;
+        position: static;        
+        li {
+            display: inline-block;            
+        }
+        a {
+            padding: 0.2rem;
+        }        
+    }
+}
+
+//Media Query for menu in header (pc without hamburger and with social media menu)
+@media screen and (min-width: 960px) {
+    .l-header-menu {
+        a {
+            padding: 0.4rem;
+        }
+    }
+    .l-header-soc-menu {
+        display: block;
+        border-left: 0.1rem solid white;
+        padding-left: 2.5rem;
+        ul {
+            padding: 0;
+            margin: 0;
+        };
+        li {
+            display: inline-block;
+            list-style: none;
+        }
+        a {
+            text-decoration: none;
+            color: map-get($map: $colors, $key: 'main');
+            display: block;
+            padding: 1rem;
+        }        
+        a:hover {
+            color: map-get($map: $colors, $key: 'third');            
+        }
+        i {
+            font-size: 1.5rem;
+        }
+
+    }
+}

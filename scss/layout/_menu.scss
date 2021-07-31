@@ -1,9 +1,10 @@
 //l- layout for menu in header for smartphone with hamburger 
 .l-header-ham-menu {
     display: block;
-    font-size: 2rem;
+    font-size: 1rem;
     color: map-get($map: $colors, $key: 'third');
     position: relative;
+    right: 2rem;
 }
 .l-header-menu {
     display: none;

@@ -88,13 +88,13 @@
         height: 100%;
     }
     .m-home-main-banner-content {
-        align-items: flex-start;               
+        align-items: center;               
     }
     .m-home-main-banner-text1, .m-home-main-banner-text2 {
-        text-align: left;
+        text-align: center;
     }
     .m-home-main-banner-text2::before {
-        left: 2.6rem;
+        left: 50%;
         top: -2rem;
     }   
 }
